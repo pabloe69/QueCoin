@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QueCoin (¿QUE?)</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .slogan {
+            font-size: 1.5em;
+            font-style: italic;
+        }
+        .coin-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .coin-value {
+            font-size: 3em;
+            color: #4caf50;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .image-gallery img {
+            width: 150px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        QueCoin (¿QUE?)
+        <p class="slogan">La moneda que te deja confundido... pero rico</p>
+    </header>
+    <div class="coin-container">
+        <div class="coin-value" id="coinValue">$0.00</div>
+        <button onclick="updateCoinValue()">¿Qué?</button>
+    </div>
+    <div class="image-gallery">
+        <img src="https://placekitten.com/150/150" alt="Gato divertido 1">
+        <img src="https://placekitten.com/151/151" alt="Gato divertido 2">
+        <img src="https://placekitten.com/152/152" alt="Gato divertido 3">
+    </div>
+    <footer>
+        &copy; 2024 QueCoin. Todos los derechos reservados. | Síguenos: Instagram | Twitter | Facebook
+    </footer>
+    <script>
+        function updateCoinValue() {
+            const newValue = (Math.random() * 100).toFixed(2);
+            document.getElementById('coinValue').innerText = `$${newValue}`;
+        }
+    </script>
+</body>
+</html>
